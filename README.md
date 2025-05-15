@@ -92,23 +92,24 @@ Edit the preprocessing script to skip unnecessary steps:
 
 * Comment out `create_groundtruth_database(...)` in `/home/bevfusion/tools/create_data.py`
 
-Run preprocessing:
-
-```bash
-python tools/create_data.py nuscenes --root-path ./data/nuscenes --out-dir ./data/nuscenes --extra-tag nuscenes --version v1.0
-```
 
 ### 7. Modify Converter for All Data Types
 
 * Modify `nuscenes_converter.py` to process LiDAR, Camera, and Radar data.
 
-### 8. Download Pre-trained Weights
+### 8. Run preprocessing:
+
+```bash
+python tools/create_data.py nuscenes --root-path ./data/nuscenes --out-dir ./data/nuscenes --extra-tag nuscenes --version v1.0
+```
+
+### 9. Download Pre-trained Weights
 
 ```bash
 ./tools/download_pretrained.sh
 ```
 
-### 9. Fix Depth Map Channel Mismatch
+### 10. Fix Depth Map Channel Mismatch
 
 Edit `mmdet3d/models/vtransforms/depth_lss.py`:
 
@@ -126,7 +127,7 @@ if d.shape[1] != 1:
 d = self.dtransform(d)
 ```
 
-### 10. Run Evaluation
+### 11. Run Evaluation
 
 ```bash
 torchpack dist-run -np 1 python tools/test.py \
