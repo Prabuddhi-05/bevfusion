@@ -1,6 +1,6 @@
 # BEVFusion Framework Setup and Execution
 
-This repository provides setup instructions and usage guidelines for running the BEVFusion framework for **3D Object Detection using LiDAR and Multi-view Camera fusion** inside Docker.
+This repository provides setup instructions and usage guidelines for running the BEVFusion framework for **3D Object Detection using LiDAR and Multi-view Camera fusion** inside Docker. It is based on the original BEVFusion repository by MIT HAN Lab.
 
 ---
 
