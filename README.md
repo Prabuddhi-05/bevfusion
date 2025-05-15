@@ -98,7 +98,7 @@ sudo bash -c "echo '/swapfile none swap sw 0 0' >> /etc/fstab"
 
 ### 7. Modify converter for all data types
 
-* Modify `nuscenes_converter.py` to process LiDAR, Camera, and Radar data.
+* Modify `nuscenes_converter.py` in `/home/bevfusion/tools/data_converter` to preprocess all nuScenes data (LiDAR, Camera, and Radar data).
 
 ### 8. Run preprocessing:
 
