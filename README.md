@@ -9,7 +9,7 @@ Created and re-used a named Docker container (**bevfusion**) for convenient inte
 
 ---
 
-## 🚀 First-time User Setup
+## First-time User Setup
 
 ### 1. Build the Docker Image
 
@@ -149,7 +149,7 @@ You can directly re-run evaluations or training as required inside this containe
 
 ---
 
-## 📌 Outputs
+## Outputs
 
 The model evaluates:
 
@@ -158,17 +158,7 @@ The model evaluates:
 
 ---
 
-## ✅ Important Checks (For Reference)
-
-* Verify consistency of results.
-* Visualize bounding boxes to confirm detections.
-* Thoroughly review LSS and Fusion-related code implementations.
-
 For detailed framework documentation, visit [BEVFusion GitHub](https://github.com/mit-han-lab/bevfusion).
-
----
-
-This README provides streamlined instructions for efficient setup and operation of the BEVFusion framework.
 
 
 
