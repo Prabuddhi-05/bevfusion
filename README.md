@@ -4,6 +4,10 @@ This repository provides setup instructions and usage guidelines for running the
 
 ---
 
+Docker Container Setup
+
+Created and re-used a named Docker container (bevfusion) for convenient integration and consistent use inside Visual Studio Code
+
 ## 🚀 First-time User Setup
 
 ### 1. Build the Docker Image
