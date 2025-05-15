@@ -72,6 +72,7 @@ ln -s /dataset ./data/nuscenes # Create a symbolic link to connect the dataset o
 
 ```python
 # from .radar_encoder import *
+```
 
 **NumPy attributeError**:
 
