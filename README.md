@@ -39,8 +39,9 @@ Run the following commands:
 ```bash
 cd /home
 git clone https://github.com/mit-han-lab/bevfusion
+OR
+git clone https://github.com/Prabuddhi-05/bevfusion.git (with all the modifications)
 cd bevfusion
-# Clone your own repository if applicable
 
 python setup.py develop
 
