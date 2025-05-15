@@ -28,7 +28,7 @@ docker run --gpus all -it \
   --shm-size=16g bevfusion /bin/bash
 ```
 
-* Replace the path /media/prabuddhi/Crucial X9/bevfusion-main/data/nuscenes with your actual dataset directory path on the host machine.
+* Replace the path with the actual dataset directory path on the host machine.
 
 * Attach to this container via VS Code:
 
@@ -43,13 +43,13 @@ Run the following commands:
 cd /home
 git clone https://github.com/mit-han-lab/bevfusion
 OR
-git clone https://github.com/Prabuddhi-05/bevfusion.git (with all the modifications)
+git clone https://github.com/Prabuddhi-05/bevfusion.git # Repo with all the modifications mentioned below (except numpy installation)
 cd bevfusion
 
 python setup.py develop
 
 mkdir -p data
-ln -s /dataset ./data/nuscenes
+ln -s /dataset ./data/nuscenes # Create a symbolic link to connect the dataset on the host machine to Docker 
 ```
 
 ### 4. Fix known issues
