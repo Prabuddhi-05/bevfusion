@@ -86,7 +86,7 @@ sudo swapon /swapfile
 sudo bash -c "echo '/swapfile none swap sw 0 0' >> /etc/fstab"
 ```
 
-### 6. Data Preprocessing (Optional, once per dataset)
+### 6. Data Preprocessing (Optional)
 
 Edit the preprocessing script to skip unnecessary steps:
 
