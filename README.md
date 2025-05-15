@@ -150,7 +150,9 @@ torchpack dist-run -np 1 python tools/test.py \
   pretrained/bevfusion-det.pth --eval bbox
 ```
 ### 12. Exit
-```exit
+```bash
+exit
+
 ```
 
 ## Subsequent runs (Reuse container)
