@@ -140,7 +140,7 @@ torchpack dist-run -np 1 python tools/test.py \
 
 ---
 
-## 🔄 Subsequent runs (Reuse container)
+## Subsequent runs (Reuse container)
 
 Restart and reuse your named container without data loss:
 
