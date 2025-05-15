@@ -91,7 +91,7 @@ sudo bash -c "echo '/swapfile none swap sw 0 0' >> /etc/fstab"
 
 ### 6. Data preprocessing (Optional)
 
-Edit the preprocessing script to skip unnecessary steps:
+* Edit the preprocessing script to skip unnecessary steps:
 
 * Comment out `create_groundtruth_database(...)` in `/home/bevfusion/tools/create_data.py`
 
