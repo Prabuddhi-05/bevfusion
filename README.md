@@ -142,19 +142,19 @@ torchpack dist-run -np 1 python tools/test.py \
 
 ## Subsequent runs (Reuse container)
 
-Restart and reuse your named container without data loss:
+* Restart and reuse your named container without data loss:
 
 ```bash
 docker start -ai bevfusion-dev
 ```
 
-You can directly re-run evaluations or training as required inside this container.
+* You can directly re-run evaluations or training as required inside this container.
 
 ---
 
 ## Outputs
 
-The model evaluates:
+* The model evaluates:
 
 * **3D object detection** using fused **6-camera and LiDAR inputs**.
 * Metrics include **NDS**, **mAP**, error metrics, and per-class results.
