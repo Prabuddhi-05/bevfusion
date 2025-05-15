@@ -154,7 +154,7 @@ docker start -ai bevfusion-dev
 
 ## Outputs
 
-* The model evaluates:
+The model evaluates:
 
 * **3D object detection** using fused **6-camera and LiDAR inputs**.
 * Metrics include **NDS**, **mAP**, error metrics, and per-class results.
