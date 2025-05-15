@@ -62,6 +62,17 @@ ln -s /dataset ./data/nuscenes # Create a symbolic link to connect the dataset o
 # from .feature_decorator import feature_decorator
 ```
 
+* In `/home/bevfusion/mmdet3d/models/backbones/radar_encoder.py`:
+
+```python
+# from mmdet3d.ops import feature_decorator
+```
+
+* In `/home/bevfusion/mmdet3d/models/backbones/__init__.py`:
+
+```python
+# from .radar_encoder import *
+
 **NumPy attributeError**:
 
 * Downgrade NumPy to resolve attribute errors:
@@ -162,7 +173,5 @@ The model evaluates:
 ---
 
 For detailed framework documentation, visit [BEVFusion GitHub](https://github.com/mit-han-lab/bevfusion).
-
-
 
 
