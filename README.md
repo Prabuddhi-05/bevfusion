@@ -114,7 +114,7 @@ python tools/create_data.py nuscenes --root-path ./data/nuscenes --out-dir ./dat
 
 ### 10. Fix depth map channel mismatch
 
-* Edit `mmdet3d/models/vtransforms/depth_lss.py`:
+* Edit `/home/bevfusion/mmdet3d/models/vtransforms/depth_lss.py`:
 
 Replace:
 
