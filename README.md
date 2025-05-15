@@ -46,7 +46,7 @@ OR
 git clone https://github.com/Prabuddhi-05/bevfusion.git # Repo with all the modifications mentioned below (except numpy installation)
 cd bevfusion
 
-python setup.py develop
+python setup.py develop # Install BEVFusion in development mode
 
 mkdir -p data
 ln -s /dataset ./data/nuscenes # Create a symbolic link to connect the dataset on the host machine to Docker 
