@@ -28,9 +28,12 @@ docker run --gpus all -it \
   --shm-size=16g bevfusion /bin/bash
 ```
 
+* Replace the path /media/prabuddhi/Crucial X9/bevfusion-main/data/nuscenes with your actual dataset directory path on the host machine.
+
 * Attach to this container via VS Code:
 
   * `Ctrl + Shift + P` → `Attach to an existing container`
+
 
 ### 3. Initial setup inside the container
 
