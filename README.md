@@ -3,15 +3,15 @@
 This repository provides setup instructions and usage guidelines for running the BEVFusion framework for **3D Object Detection using LiDAR and Multi-view Camera Fusion in the Bird's Eye View"** inside Docker. It is based on the [original BEVFusion repository by MIT HAN Lab](https://github.com/mit-han-lab/bevfusion).
 
 ---
-## Docker Container Setup
+## Docker container setup
 
 Created and re-used a named Docker container (**bevfusion**) for convenient integration and consistent use inside Visual Studio Code.
 
 ---
 
-## First-time User Setup
+## First-time user setup
 
-### 1. Build the Docker Image
+### 1. Build the Docker image
 
 Run this command only if the Dockerfile has been updated:
 
@@ -19,7 +19,7 @@ Run this command only if the Dockerfile has been updated:
 docker build -t bevfusion .
 ```
 
-### 2. Create and Run a Named Docker Container
+### 2. Create and run a named Docker container
 
 ```bash
 docker run --gpus all -it \
@@ -32,7 +32,7 @@ docker run --gpus all -it \
 
   * `Ctrl + Shift + P` → `Attach to an existing container`
 
-### 3. Initial Setup Inside the Container
+### 3. Initial setup inside the container
 
 Run the following commands:
 
@@ -49,9 +49,9 @@ mkdir -p data
 ln -s /dataset ./data/nuscenes
 ```
 
-### 4. Fix Known Issues
+### 4. Fix known issues
 
-**Feature Decorator Issue**:
+**Feature decorator issue**:
 
 * Comment the following line in `/home/bevfusion/mmdet3d/ops/__init__.py`:
 
@@ -59,7 +59,7 @@ ln -s /dataset ./data/nuscenes
 # from .feature_decorator import feature_decorator
 ```
 
-**NumPy AttributeError**:
+**NumPy attributeError**:
 
 * Downgrade NumPy to resolve attribute errors:
 
@@ -67,7 +67,7 @@ ln -s /dataset ./data/nuscenes
 conda install numpy=1.23.5 -y
 ```
 
-### 5. Create Swap Memory (Prevents Crashes)
+### 5. Create swap memory (Prevents crashes)
 
 * Check memory usage (optional):
 
@@ -86,14 +86,14 @@ sudo swapon /swapfile
 sudo bash -c "echo '/swapfile none swap sw 0 0' >> /etc/fstab"
 ```
 
-### 6. Data Preprocessing (Optional)
+### 6. Data preprocessing (Optional)
 
 Edit the preprocessing script to skip unnecessary steps:
 
 * Comment out `create_groundtruth_database(...)` in `/home/bevfusion/tools/create_data.py`
 
 
-### 7. Modify Converter for All Data Types
+### 7. Modify converter for all data types
 
 * Modify `nuscenes_converter.py` to process LiDAR, Camera, and Radar data.
 
@@ -103,13 +103,13 @@ Edit the preprocessing script to skip unnecessary steps:
 python tools/create_data.py nuscenes --root-path ./data/nuscenes --out-dir ./data/nuscenes --extra-tag nuscenes --version v1.0
 ```
 
-### 9. Download Pre-trained Weights
+### 9. Download pre-trained weights
 
 ```bash
 ./tools/download_pretrained.sh
 ```
 
-### 10. Fix Depth Map Channel Mismatch
+### 10. Fix depth map channel mismatch
 
 Edit `mmdet3d/models/vtransforms/depth_lss.py`:
 
@@ -127,7 +127,7 @@ if d.shape[1] != 1:
 d = self.dtransform(d)
 ```
 
-### 11. Run Evaluation
+### 11. Run evaluation
 
 ```bash
 torchpack dist-run -np 1 python tools/test.py \
@@ -137,7 +137,7 @@ torchpack dist-run -np 1 python tools/test.py \
 
 ---
 
-## 🔄 Subsequent Runs (Reuse Container)
+## 🔄 Subsequent runs (Reuse container)
 
 Restart and reuse your named container without data loss:
 
