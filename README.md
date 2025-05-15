@@ -3,10 +3,11 @@
 This repository provides setup instructions and usage guidelines for running the BEVFusion framework for **3D Object Detection using LiDAR and Multi-view Camera fusion** inside Docker. It is based on the original BEVFusion repository by MIT HAN Lab.
 
 ---
+## Docker Container Setup
 
-Docker Container Setup
+Created and re-used a named Docker container (**bevfusion**) for convenient integration and consistent use inside Visual Studio Code.
 
-Created and re-used a named Docker container (bevfusion) for convenient integration and consistent use inside Visual Studio Code
+---
 
 ## 🚀 First-time User Setup
 
@@ -166,3 +167,8 @@ For detailed framework documentation, visit [BEVFusion GitHub](https://github.co
 ---
 
 This README provides streamlined instructions for efficient setup and operation of the BEVFusion framework.
+
+
+
+
+
